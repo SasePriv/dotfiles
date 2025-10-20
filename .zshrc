@@ -11,6 +11,18 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+#################
+#  ZSH Plugins  #
+#################
+
+# Check if oh-my-zsh is installed
+if [ ! -d $ZSH ]; then
+  echo --------------------------
+  echo   Installing Oh-my-zsh
+  echo --------------------------
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+
 plugins=(
 	git               # git completions
 	pj                # cd to local projects with completions
